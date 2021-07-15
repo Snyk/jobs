@@ -4,12 +4,16 @@ A simple UI for displaying a depenency tree
 
 ## Running locally
 
+You need to have `node 14` and `npm 6` (not 7) installed. A tool such as [fnm](https://github.com/Schniz/fnm) simplifies switching versions.
+
 Install dependencies:
+
 ```
 npm ci
 ```
 
 Start the application:
+
 ```
 npm run serve
 ```
@@ -19,6 +23,7 @@ You can now visit http://localhost:8080 to view it.
 ## Tests
 
 To run linting & tests run:
+
 ```
 npm test
 ```
@@ -26,6 +31,7 @@ npm test
 ## Storybook
 
 To view the available Vue components, you can run Storybook (documentation / design system):
+
 ```
 npm run storybook
 ```
@@ -37,11 +43,13 @@ npm run storybook
 The dependency tree currently loads from a fixture file at `exercises/src/components/DependenciesTree/depGraph.fixture.js`.
 
 Run the server found at `exercises/npm-registry`
+
 ```bash
 cd exercises/npm-registry
 npm ci
 npm start
 ```
+
 Use the JSON response from this server at `http://localhost:3000/package/{packageName}/latest` (e.g. http://localhost:3000/package/express/latest) to populate the DependenciesTree instead of using the fixture file.
 
 ### Task 2
